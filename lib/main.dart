@@ -7,10 +7,10 @@ import 'app_theme.dart';
 import 'responsive_profile.dart';
 import 'assets_media.dart';
 import 'detail_page.dart';
+import 'home_page.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,20 +19,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
+      home: const HomePage(),
+    );
+  }
+}
+// void main() {
+//   runApp(const MyApp());
+// }
 
-      title: 'Assets media dan navigation',
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Poppins',
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(0, 7, 7, 7))
-      ),
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
 
-      initialRoute: '/',
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
 
-      routes: {
-        '/' : (context) => const AssetsMediaPage(),
-        '/detail' : (context) => const DetailPage(),
-      },
+//       title: 'Assets media dan navigation',
+//       theme: ThemeData(
+//         useMaterial3: true,
+//         fontFamily: 'Poppins',
+//         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(0, 7, 7, 7))
+//       ),
+
+//       initialRoute: '/',
+
+//       routes: {
+//         '/' : (context) => const AssetsMediaPage(),
+//         '/detail' : (context) => const DetailPage(),
+//       },
       // title: 'Assets Media',
 
       // theme: ThemeData(
@@ -42,9 +58,9 @@ class MyApp extends StatelessWidget {
       //     seedColor: const Color(0xFF4D63D9),
       //   ),
       // ),
-    );
-  }
-}
+//     );
+//   }
+// }
 
 //   @override
 //   State<MyApp> createState() => _MyAppState();

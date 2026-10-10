@@ -34,11 +34,13 @@ class _AssetsMediaPageState extends State<AssetsMediaPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF8F6FC),
+
       // --- PENAMBAHAN APPBAR ---
       appBar: AppBar(
         title: const Text('Beranda Assets & Media'),
         backgroundColor: const Color(0xFFE1E5FF),
       ),
+      
       // --- PENAMBAHAN DRAWER (MENU SAMPING) ---
       drawer: Drawer(
         child: ListView(
@@ -68,7 +70,9 @@ class _AssetsMediaPageState extends State<AssetsMediaPage> {
           ],
         ),
       ),
-      // --- KONTEN UTAMA (KODE LAMA) ---
+      
+
+      
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.all(20),
@@ -101,7 +105,7 @@ class _AssetsMediaPageState extends State<AssetsMediaPage> {
                     ),
                     const SizedBox(height: 15),
                     const Text(
-                      'Nama Mahasiswa',
+                      'Nur Ramadhani',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontSize: 22,
