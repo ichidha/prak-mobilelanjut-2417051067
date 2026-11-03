@@ -3,14 +3,16 @@ import 'package:flutter/material.dart';
 // import 'row_widget.dart';
 // import 'first_widget.dart';
 // import 'form_widget.dart';
+import 'api_page.dart';
 import 'app_theme.dart';
 import 'responsive_profile.dart';
 import 'assets_media.dart';
 import 'detail_page.dart';
 import 'home_page.dart';
 
-
-void main() => runApp(const MyApp());
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -19,11 +21,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
-      home: const HomePage(),
+      title: 'REST API Praktikum',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const ApiPage(),
     );
   }
 }
+// void main() => runApp(const MyApp());
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(colorSchemeSeed: Colors.indigo, useMaterial3: true),
+//       home: const HomePage(),
+//     );
+//   }
+// }
 // void main() {
 //   runApp(const MyApp());
 // }
