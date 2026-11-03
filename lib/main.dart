@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 // import 'row_widget.dart';
 // import 'first_widget.dart';
 // import 'form_widget.dart';
-import 'api_page.dart';
-import 'app_theme.dart';
-import 'responsive_profile.dart';
-import 'assets_media.dart';
-import 'detail_page.dart';
-import 'home_page.dart';
+// import 'api_page.dart';
+// import 'app_theme.dart';
+// import 'responsive_profile.dart';
+// import 'assets_media.dart';
+// import 'detail_page.dart';
+// import 'home_page.dart';
+// import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'providers/product_provider.dart';
+import 'views/product_list_view.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -19,16 +24,39 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'REST API Praktikum',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return ChangeNotifierProvider(
+      create: (_) => ProductProvider(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Praktikum Arsitektur Aplikasi',
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        ),
+        home: const ProductListView(),
       ),
-      home: const ApiPage(),
     );
   }
 }
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'REST API Praktikum',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       home: const ApiPage(),
+//     );
+//   }
+// }
 // void main() => runApp(const MyApp());
 
 // class MyApp extends StatelessWidget {
